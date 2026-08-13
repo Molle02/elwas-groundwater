@@ -1,0 +1,40 @@
+{
+  "title": "ELWAS Groundwater",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add ELWAS groundwater station",
+        "description": "Enter the nine-digit LGD station number. The public station export is validated and analyzed during setup.",
+        "data": {"station_id": "LGD station number"}
+      }
+    },
+    "error": {
+      "invalid_station_id": "The LGD number must contain exactly nine digits",
+      "station_not_found": "No public ELWAS groundwater station was found for this LGD number",
+      "cannot_connect": "Unable to connect to ELWAS",
+      "unknown": "ELWAS returned an unexpected response"
+    },
+    "abort": {"already_configured": "This ELWAS station is already configured"}
+  },
+  "entity": {
+    "sensor": {
+      "depth_to_groundwater": {"name": "Depth to groundwater"},
+      "groundwater_level": {"name": "Groundwater level"},
+      "ground_level": {"name": "Ground level"},
+      "measurement_date": {"name": "Measurement date"},
+      "data_age": {"name": "Data age"},
+      "trend_7d": {"name": "7-day trend"},
+      "trend_30d": {"name": "30-day trend"},
+      "trend_direction": {
+        "name": "Trend direction",
+        "state": {"rising": "Rising", "stable": "Stable", "falling": "Falling"}
+      },
+      "seasonal_mean_depth": {"name": "Seasonal mean depth"},
+      "seasonal_anomaly": {"name": "Seasonal deviation"},
+      "seasonal_percentile": {"name": "Seasonal percentile"}
+    },
+    "binary_sensor": {
+      "data_stale": {"name": "Data stale"}
+    }
+  }
+}
