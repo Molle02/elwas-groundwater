@@ -1,0 +1,11 @@
+{
+  "domain": "elwas_groundwater",
+  "name": "ELWAS Groundwater",
+  "codeowners": ["@Sachverstand1965"],
+  "config_flow": true,
+  "documentation": "https://github.com/Sachverstand1965/elwas-groundwater",
+  "issue_tracker": "https://github.com/Sachverstand1965/elwas-groundwater/issues",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "1.0.1"
+}
