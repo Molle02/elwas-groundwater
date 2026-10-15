@@ -1,5 +1,7 @@
 # ELWAS Groundwater für Home Assistant
 
+**Aktuelle Version: 1.0.2**
+
 Diese Custom-Integration liest die veröffentlichten Wasserstände und
 Flurabstände einer nordrhein-westfälischen ELWAS-Grundwassermessstelle ein.
 Voreingestellt ist die LGD-Nummer **080200357** (`MEERERBUSCH Nr 88`). Andere
@@ -60,7 +62,7 @@ bereit; die Integration bildet deshalb den öffentlichen JSF-Webablauf nach.
 
 ## Manuelle Installation
 
-1. Das Paket `elwas-groundwater-1.0.0.zip` entpacken.
+1. Das Paket `elwas-groundwater-1.0.2.zip` entpacken.
 2. Den darin enthaltenen Ordner `elwas_groundwater` vollständig nach
    `<config>/custom_components/` kopieren. Das Ergebnis muss so aussehen:
 
@@ -85,3 +87,19 @@ der Quelldaten kann trotzdem zurückliegen; deshalb zeigen `Datenalter` und
 `Daten veraltet` die tatsächliche Aktualität ausdrücklich an. Bereits geladene
 Werte bleiben bei einem vorübergehenden ELWAS-Ausfall erhalten.
 
+## Änderungen
+
+### Version 1.0.2
+
+- Neu veröffentlichte Updateversion mit der Jakarta-Faces-Korrektur.
+- Ersetzt das versehentlich mit altem Quellstand veröffentlichte Release 1.0.1.
+
+### Version 1.0.1
+
+- Kompatibilität mit der ELWAS-Umstellung von Javax Faces auf Jakarta Faces.
+- Automatische Erkennung des vom ELWAS-Server verwendeten JSF-Namensraums.
+- Live geprüft mit der Messstelle `080200357` am 15. Oktober 2026.
+
+### Version 1.0.0
+
+- Erste Veröffentlichung.

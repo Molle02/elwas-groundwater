@@ -226,18 +226,19 @@ class ElwasGroundwaterClient:
         detail_form = _find_form(html, ":dDSwitcher")
         switch_name = _find_field_name(detail_form, ":dDSwitcher")
         form_id = _find_jsf_form_id(detail_form)
+        faces_namespace = _find_faces_namespace(detail_form)
         switch_data = _replace_field(detail_form.fields, switch_name, "5")
         switch_data.extend(
             [
-                ("javax.faces.partial.ajax", "true"),
-                ("javax.faces.source", switch_name),
+                (f"{faces_namespace}.partial.ajax", "true"),
+                (f"{faces_namespace}.source", switch_name),
                 # Mojarra expands @form in the browser before sending the
                 # request.  Sending the literal token makes ELWAS keep the
                 # "Stammdaten" view and therefore hides the Excel export.
-                ("javax.faces.partial.execute", f"{switch_name} {form_id}"),
-                ("javax.faces.partial.render", "@all"),
-                ("javax.faces.behavior.event", "change"),
-                ("javax.faces.partial.event", "change"),
+                (f"{faces_namespace}.partial.execute", f"{switch_name} {form_id}"),
+                (f"{faces_namespace}.partial.render", "@all"),
+                (f"{faces_namespace}.behavior.event", "change"),
+                (f"{faces_namespace}.partial.event", "change"),
             ]
         )
         partial, page_url = await self._post_text(
@@ -501,6 +502,17 @@ def _find_jsf_form_id(form: _Form) -> str:
     if form_id is None:
         raise ElwasFormatError("ELWAS detail form identifier was not found")
     return form_id
+
+
+def _find_faces_namespace(form: _Form) -> str:
+    """Detect whether the ELWAS server uses Jakarta Faces or legacy Javax Faces."""
+    view_state_name = next(
+        (name for name, _ in form.fields if name.endswith(".faces.ViewState")),
+        None,
+    )
+    if view_state_name is None:
+        raise ElwasFormatError("ELWAS Faces namespace was not found")
+    return view_state_name.removesuffix(".ViewState")
 
 
 def _find_control(form: _Form, marker: str) -> tuple[str, str, str]:
