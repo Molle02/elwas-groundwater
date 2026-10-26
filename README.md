@@ -60,6 +60,17 @@ ELWAS stellt für diesen Abruf keine stabile öffentliche Programmierschnittstel
 bereit; die Integration bildet deshalb den öffentlichen JSF-Webablauf nach.
 Ändert das Land NRW diese Webseite, kann eine Anpassung nötig werden.
 
+## Installation über HACS
+
+[![Repository in HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Molle02&repository=elwas-groundwater&category=integration)
+
+1. Auf den Button klicken und die eigene Home-Assistant-Instanz bestätigen.
+   HACS fügt das Repository als benutzerdefiniertes Repository hinzu.
+2. **Herunterladen** wählen und Home Assistant neu starten.
+3. Die Integration einrichten:
+
+[![Integration einrichten](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=elwas_groundwater)
+
 ## Manuelle Installation
 
 1. Das Paket `elwas-groundwater-1.0.2.zip` entpacken.
