@@ -1,6 +1,6 @@
 # ELWAS Groundwater für Home Assistant
 
-**Aktuelle Version: 1.0.2**
+**Aktuelle Version: 1.0.3**
 
 Diese Custom-Integration liest die veröffentlichten Wasserstände und
 Flurabstände einer nordrhein-westfälischen ELWAS-Grundwassermessstelle ein.
@@ -73,7 +73,7 @@ bereit; die Integration bildet deshalb den öffentlichen JSF-Webablauf nach.
 
 ## Manuelle Installation
 
-1. Das Paket `elwas-groundwater-1.0.2.zip` entpacken.
+1. Das Paket `elwas-groundwater-1.0.3.zip` entpacken.
 2. Den darin enthaltenen Ordner `elwas_groundwater` vollständig nach
    `<config>/custom_components/` kopieren. Das Ergebnis muss so aussehen:
 
@@ -99,6 +99,11 @@ der Quelldaten kann trotzdem zurückliegen; deshalb zeigen `Datenalter` und
 Werte bleiben bei einem vorübergehenden ELWAS-Ausfall erhalten.
 
 ## Änderungen
+
+### Version 1.0.3
+
+- Neuer Abschnitt „Installation über HACS“ mit My-Home-Assistant-Buttons
+  zum direkten Hinzufügen des Repositorys und zum Starten der Einrichtung.
 
 ### Version 1.0.2
 

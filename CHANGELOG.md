@@ -1,5 +1,11 @@
 # Änderungsprotokoll
 
+## 1.0.3 – 26. Oktober 2026
+
+- README: Abschnitt „Installation über HACS“ mit My-Home-Assistant-Buttons
+  zum direkten Hinzufügen des Repositorys zur eigenen Instanz.
+- README: Button zum direkten Starten der Einrichtung der Integration.
+
 ## 1.0.2 – 15. Oktober 2026
 
 - Neu veröffentlichtes HACS-Update mit der Jakarta-Faces-Korrektur.
