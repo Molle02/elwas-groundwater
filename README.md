@@ -62,7 +62,7 @@ bereit; die Integration bildet deshalb den öffentlichen JSF-Webablauf nach.
 
 ## Installation über HACS
 
-[![Repository in HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Molle02&repository=elwas-groundwater&category=integration)
+[![Repository in HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Sachverstand1965&repository=elwas-groundwater&category=integration)
 
 1. Auf den Button klicken und die eigene Home-Assistant-Instanz bestätigen.
    HACS fügt das Repository als benutzerdefiniertes Repository hinzu.
